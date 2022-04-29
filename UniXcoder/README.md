@@ -191,7 +191,19 @@ print([x.replace("<mask0>","").strip() for x in predictions[0]])
 
 For downstream tasks reported in the paper, please refer to the [downstream-tasks](https://github.com/microsoft/CodeBERT/tree/master/UniXcoder/downstream-tasks) folders.
 
+# MiniBert
 
+One can run the pre-trained model with the following command.
+
+```
+python3 probe.py examples/example.java
+```
+
+The example program (`example.java`) contains a non-terminal (`<mask0>`) to be inferenced by the model.
+The command prints the program element that shall be filled in the example program.
+There are other programs in `examples/` directory as well.
+
+#### TODO: further train the model, understand how the model learns with heterogeneous programs (written in different programming languages).
 
 # Reference
 If you use this code or UniXcoder, please consider citing us.
